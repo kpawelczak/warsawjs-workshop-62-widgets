@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WarsawJS</title>
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <header>
+      <h1>WarsawJS #62</h1>
+      <p>Widgets Library</p>
+    </header>
+
+    <main>
+      <p>This is your new random password:</p>
+      <p><strong id="value">loading...</strong></p>
+    </main>
+
+    <footer>
+      <p>Made for WarsawJS by Daniel Siwek</p>
+    </footer>
+
+    <script src="widgets.js"></script>
+    <script>
+      const widget = new window.WidgetsLibrary("#value");
+    </script>
+  </body>
+</html>

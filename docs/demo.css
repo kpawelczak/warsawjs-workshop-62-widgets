@@ -1,0 +1,25 @@
+body {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.5;
+  padding: 3rem;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+main {
+  border: 1px solid darkslategray;
+  padding: 2rem;
+  border-radius: .3rem;
+}
+
+footer {
+  margin-top: 8rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

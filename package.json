@@ -1,0 +1,61 @@
+{
+  "name": "widgets-library",
+  "version": "1.0.0",
+  "description": "Repository created for WarsawJS #62",
+  "main": "docs/index.js",
+  "module": "docs/index.js",
+  "types": "docs/index.d.ts",
+  "author": "Daniel Siwek <danielsiwek95@gmail.com>",
+  "files": [
+    "docs"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn watch\" \"yarn watch:demo\" \"yarn serve\"",
+    "build": "webpack --config webpack.config.ts",
+    "build:demo": "tsc docs/demo.ts",
+    "watch": "yarn build -- --watch",
+    "watch:demo": "yarn build:demo -- --watch",
+    "serve": "cd docs && live-server && cd ../",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.1",
+    "@types/node": "17.0.23",
+    "@types/webpack": "5.28.0",
+    "concurrently": "7.1.0",
+    "coveralls": "3.1.1",
+    "css-loader": "6.7.1",
+    "jest": "27.5.1",
+    "live-server": "1.2.1",
+    "node-sass": "7.0.1",
+    "onchange": "7.1.0",
+    "prettier": "2.6.2",
+    "sass-loader": "12.6.0",
+    "style-loader": "3.3.1",
+    "ts-jest": "27.1.4",
+    "ts-loader": "9.2.8",
+    "ts-node": "10.7.0",
+    "tsc": "2.0.4",
+    "typescript": "4.6.3",
+    "webpack": "5.72.0",
+    "webpack-cli": "4.9.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/tests/"
+    ],
+    "transform": {
+      ".+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {}
+}
