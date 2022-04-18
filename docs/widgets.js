@@ -20,6 +20,26 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/widgets/MatchWidget/template.html":
+/*!***********************************************!*\
+  !*** ./src/widgets/MatchWidget/template.html ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<div class=\\\"container\\\">\\n  <div class=\\\"header-container\\\">\\n    <div class=\\\"flag\\\"></div>\\n    <img\\n      src=\\\"https://storage.googleapis.com/sportxpert-production-bucket/competition_fbf8bce1-e51a-4c2f-99c6-79aaebcd52a5.png\\\"\\n      height=\\\"18\\\"\\n      alt=\\\"image\\\"\\n    >\\n    <span>Premier League</span>\\n  </div>\\n  <div class=\\\"bagde-container\\\"></div>\\n  <div class=\\\"content-container\\\"></div>\\n  <div class=\\\"footer-container\\\"></div>\\n</div>\\n\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://widgets-library/./src/widgets/MatchWidget/template.html?");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/widgets/MatchWidget/style.css":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/widgets/MatchWidget/style.css ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\".container {\\n  width: 260px;\\n  border-width: 3px 1px 1px;\\n  border-style: solid;\\n  border-color: rgb(8, 142, 25) rgb(236, 236, 236) rgb(236, 236, 236);\\n  border-image: initial;\\n}\\n\\n.header-container {\\n  display: flex;\\n  background-color: rgb(236, 236, 236);\\n  height: 21px;\\n}\\n\\n.header-container *+* {\\n  margin-left: 10px;\\n}\\n\\n.badger-container {\\n  position: relative;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 180px;\\n  height: 24px;\\n  padding: 0px 20px;\\n  margin: 0px auto;\\n  background-color: blue;\\n}\\n\\n.flag {\\n  height: 21px;\\n  width: 40px;\\n  background-image: url(https://storage.googleapis.com/sportxpert-production-bucket/area_80f6e719-d916-4213-8bc2-f96d4c8321f6.jpg);\\n  background-size: cover;\\n}\\n\\n.content-container {\\n  display: flex;\\n  justify-content: space-between;\\n  margin-top: 12px;\\n  padding: 0px 12px 12px;\\n}\\n\\n.footer-container {\\n  padding: 6px 0px;\\n  position: relative;\\n  border-top: 1px solid rgb(236, 236, 236);\\n  z-index: 2;\\n}\\n\");\n\n//# sourceURL=webpack://widgets-library/./src/widgets/MatchWidget/style.css?./node_modules/raw-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
@@ -34,9 +54,9 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\ncons
 /*!************************************************!*\
   !*** ./src/widgets/MatchWidget/MatchWidget.ts ***!
   \************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.MatchWidget = void 0;\nclass MatchWidget extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n        this.attachStyles();\n        this.render();\n    }\n    get props() {\n        return this.getAttributeNames().reduce((acc, attributeName) => {\n            acc[attributeName] = this.getAttribute(attributeName);\n            return acc;\n        }, {});\n    }\n    render() {\n        var _a;\n        const template = document.createElement('div');\n        template.classList.add('container');\n        const headerContainer = document.createElement('div');\n        headerContainer.classList.add('header-container');\n        const flag = document.createElement('div');\n        flag.classList.add('flag');\n        const leagueImg = document.createElement('img');\n        leagueImg.setAttribute('src', 'https://storage.googleapis.com/sportxpert-production-bucket/competition_fbf8bce1-e51a-4c2f-99c6-79aaebcd52a5.png');\n        leagueImg.setAttribute('height', '18');\n        const leagueName = document.createElement('span');\n        leagueName.innerHTML = 'Premier League';\n        headerContainer.appendChild(flag);\n        headerContainer.appendChild(leagueImg);\n        headerContainer.appendChild(leagueName);\n        const badgeContainer = document.createElement('div');\n        badgeContainer.classList.add('bagde-container');\n        const contentContainer = document.createElement('div');\n        contentContainer.classList.add('content-container');\n        const footerContainer = document.createElement('div');\n        footerContainer.classList.add('footer-container');\n        template.appendChild(headerContainer);\n        template.appendChild(badgeContainer);\n        template.appendChild(contentContainer);\n        template.appendChild(footerContainer);\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(template);\n    }\n    attachStyles() {\n        var _a;\n        const style = document.createElement('style');\n        style.innerHTML = `\n      .container {\n        width: 260px;\n        border-width: 3px 1px 1px;\n        border-style: solid;\n        border-color: rgb(8, 142, 25) rgb(236, 236, 236) rgb(236, 236, 236);\n        border-image: initial;\n      }\n      .header-container {\n        display: flex;\n        background-color: rgb(236, 236, 236);\n        height: 21px;\n      }\n      .header-container * + * {\n        margin-left: 10px;\n      }\n      .badger-container {\n        position: relative;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        width: 180px;\n        height: 24px;\n        padding: 0px 20px;\n        margin: 0px auto;\n        background-color: blue;\n      }\n      .flag {\n        height: 21px;\n        width: 40px;\n        background-image: url(https://storage.googleapis.com/sportxpert-production-bucket/area_80f6e719-d916-4213-8bc2-f96d4c8321f6.jpg);\n        background-size: cover;\n      }\n      .content-container {\n        display: flex;\n        justify-content: space-between;\n        margin-top: 12px;\n        padding: 0px 12px 12px;\n      }\n      .footer-container {\n        padding: 6px 0px;\n        position: relative;\n        border-top: 1px solid rgb(236, 236, 236);\n        z-index: 2;\n      }\n    `;\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(style);\n    }\n}\nexports.MatchWidget = MatchWidget;\n\n\n//# sourceURL=webpack://widgets-library/./src/widgets/MatchWidget/MatchWidget.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.MatchWidget = void 0;\nconst templateString = (__webpack_require__(/*! ./template.html */ \"./src/widgets/MatchWidget/template.html\")[\"default\"]);\nconst stylesString = (__webpack_require__(/*! raw-loader!./style.css */ \"./node_modules/raw-loader/dist/cjs.js!./src/widgets/MatchWidget/style.css\")[\"default\"]);\nclass MatchWidget extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n        this.render();\n        this.attachStyles();\n    }\n    get props() {\n        return this.getAttributeNames().reduce((acc, attributeName) => {\n            acc[attributeName] = this.getAttribute(attributeName);\n            return acc;\n        }, {});\n    }\n    render() {\n        if (this.shadowRoot)\n            this.shadowRoot.innerHTML = templateString;\n    }\n    attachStyles() {\n        var _a;\n        const style = document.createElement('style');\n        style.innerHTML = stylesString;\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(style);\n    }\n}\nexports.MatchWidget = MatchWidget;\n\n\n//# sourceURL=webpack://widgets-library/./src/widgets/MatchWidget/MatchWidget.ts?");
 
 /***/ })
 
@@ -65,6 +85,35 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

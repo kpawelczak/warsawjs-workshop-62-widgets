@@ -27,3 +27,5 @@
 
 ## Steps
 ### Setup and Basic structure
+
+### Separate responsibility into files
