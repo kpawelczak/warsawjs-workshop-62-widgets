@@ -13,8 +13,9 @@
     </header>
 
     <main>
-      <p>This is your new random password:</p>
-      <p><strong id="value">loading...</strong></p>
+      <!-- <p>This is your new random password:</p> -->
+      <!-- <p><strong id="value">loading...</strong></p> -->
+      <match-widget match-id="123-456-789"></match-widget>
     </main>
 
     <footer>
@@ -23,7 +24,7 @@
 
     <script src="widgets.js"></script>
     <script>
-      const widget = new window.WidgetsLibrary("#value");
+      const widget = new window.WidgetsLibrary('.match-widget', 'match-widget');
     </script>
   </body>
 </html>

@@ -2,7 +2,7 @@ import path from "path";
 import webpack from "webpack";
 
 const config: webpack.Configuration = {
-  mode: "production",
+  mode: "development",
   entry: "./src/index.ts",
   module: {
     rules: [
@@ -14,6 +14,11 @@ const config: webpack.Configuration = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        loader: "html-loader"
       }
     ]
   },

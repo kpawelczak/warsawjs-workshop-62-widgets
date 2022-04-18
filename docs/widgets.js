@@ -1,1 +1,79 @@
-!function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{var r=t();for(var n in r)("object"==typeof exports?exports:e)[n]=r[n]}}(self,(()=>(()=>{"use strict";var e={61:(e,t,r)=>{r.d(t,{Z:()=>s});var n=r(81),o=r.n(n),a=r(645),i=r.n(a)()(o());i.push([e.id,"",""]);const s=i},645:e=>{e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var r="",n=void 0!==t[5];return t[4]&&(r+="@supports (".concat(t[4],") {")),t[2]&&(r+="@media ".concat(t[2]," {")),n&&(r+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),r+=e(t),n&&(r+="}"),t[2]&&(r+="}"),t[4]&&(r+="}"),r})).join("")},t.i=function(e,r,n,o,a){"string"==typeof e&&(e=[[null,e,void 0]]);var i={};if(n)for(var s=0;s<this.length;s++){var c=this[s][0];null!=c&&(i[c]=!0)}for(var u=0;u<e.length;u++){var d=[].concat(e[u]);n&&i[d[0]]||(void 0!==a&&(void 0===d[5]||(d[1]="@layer".concat(d[5].length>0?" ".concat(d[5]):""," {").concat(d[1],"}")),d[5]=a),r&&(d[2]?(d[1]="@media ".concat(d[2]," {").concat(d[1],"}"),d[2]=r):d[2]=r),o&&(d[4]?(d[1]="@supports (".concat(d[4],") {").concat(d[1],"}"),d[4]=o):d[4]="".concat(o)),t.push(d))}},t}},81:e=>{e.exports=function(e){return e[1]}},868:(e,t,r)=>{r.r(t),r.d(t,{default:()=>h});var n=r(379),o=r.n(n),a=r(795),i=r.n(a),s=r(569),c=r.n(s),u=r(565),d=r.n(u),l=r(216),f=r.n(l),p=r(589),v=r.n(p),m=r(61),y={};y.styleTagTransform=v(),y.setAttributes=d(),y.insert=c().bind(null,"head"),y.domAPI=i(),y.insertStyleElement=f(),o()(m.Z,y);const h=m.Z&&m.Z.locals?m.Z.locals:void 0},379:e=>{var t=[];function r(e){for(var r=-1,n=0;n<t.length;n++)if(t[n].identifier===e){r=n;break}return r}function n(e,n){for(var a={},i=[],s=0;s<e.length;s++){var c=e[s],u=n.base?c[0]+n.base:c[0],d=a[u]||0,l="".concat(u," ").concat(d);a[u]=d+1;var f=r(l),p={css:c[1],media:c[2],sourceMap:c[3],supports:c[4],layer:c[5]};if(-1!==f)t[f].references++,t[f].updater(p);else{var v=o(p,n);n.byIndex=s,t.splice(s,0,{identifier:l,updater:v,references:1})}i.push(l)}return i}function o(e,t){var r=t.domAPI(t);return r.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap&&t.supports===e.supports&&t.layer===e.layer)return;r.update(e=t)}else r.remove()}}e.exports=function(e,o){var a=n(e=e||[],o=o||{});return function(e){e=e||[];for(var i=0;i<a.length;i++){var s=r(a[i]);t[s].references--}for(var c=n(e,o),u=0;u<a.length;u++){var d=r(a[u]);0===t[d].references&&(t[d].updater(),t.splice(d,1))}a=c}}},569:e=>{var t={};e.exports=function(e,r){var n=function(e){if(void 0===t[e]){var r=document.querySelector(e);if(window.HTMLIFrameElement&&r instanceof window.HTMLIFrameElement)try{r=r.contentDocument.head}catch(e){r=null}t[e]=r}return t[e]}(e);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");n.appendChild(r)}},216:e=>{e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t,e.options),t}},565:(e,t,r)=>{e.exports=function(e){var t=r.nc;t&&e.setAttribute("nonce",t)}},795:e=>{e.exports=function(e){var t=e.insertStyleElement(e);return{update:function(r){!function(e,t,r){var n="";r.supports&&(n+="@supports (".concat(r.supports,") {")),r.media&&(n+="@media ".concat(r.media," {"));var o=void 0!==r.layer;o&&(n+="@layer".concat(r.layer.length>0?" ".concat(r.layer):""," {")),n+=r.css,o&&(n+="}"),r.media&&(n+="}"),r.supports&&(n+="}");var a=r.sourceMap;a&&"undefined"!=typeof btoa&&(n+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleTagTransform(n,e,t.options)}(t,e,r)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},589:e=>{e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}},963:(e,t)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.random=void 0,t.random=function(){return Math.random().toString(36).slice(2)}}},t={};function r(n){var o=t[n];if(void 0!==o)return o.exports;var a=t[n]={id:n,exports:{}};return e[n](a,a.exports,r),a.exports}r.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return r.d(t,{a:t}),t},r.d=(e,t)=>{for(var n in t)r.o(t,n)&&!r.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var n={};return(()=>{var e=n;Object.defineProperty(e,"__esModule",{value:!0});var t=r(963);r(868);var o=function(e){if(!e)throw Error("Element parameter is required");this.value=(0,t.random)();var r=document.querySelector(e);r&&(r.innerHTML=this.value)};e.default=o,window.WidgetsLibrary=o})(),n})()));
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(self, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst MatchWidget_1 = __webpack_require__(/*! ./widgets/MatchWidget/MatchWidget */ \"./src/widgets/MatchWidget/MatchWidget.ts\");\nwindow.customElements.define('match-widget', MatchWidget_1.MatchWidget);\n\n\n//# sourceURL=webpack://widgets-library/./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/widgets/MatchWidget/MatchWidget.ts":
+/*!************************************************!*\
+  !*** ./src/widgets/MatchWidget/MatchWidget.ts ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.MatchWidget = void 0;\nclass MatchWidget extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n        this.attachStyles();\n        this.render();\n    }\n    get props() {\n        return this.getAttributeNames().reduce((acc, attributeName) => {\n            acc[attributeName] = this.getAttribute(attributeName);\n            return acc;\n        }, {});\n    }\n    render() {\n        var _a;\n        const template = document.createElement('div');\n        template.classList.add('container');\n        const headerContainer = document.createElement('div');\n        headerContainer.classList.add('header-container');\n        const flag = document.createElement('div');\n        flag.classList.add('flag');\n        const leagueImg = document.createElement('img');\n        leagueImg.setAttribute('src', 'https://storage.googleapis.com/sportxpert-production-bucket/competition_fbf8bce1-e51a-4c2f-99c6-79aaebcd52a5.png');\n        leagueImg.setAttribute('height', '18');\n        const leagueName = document.createElement('span');\n        leagueName.innerHTML = 'Premier League';\n        headerContainer.appendChild(flag);\n        headerContainer.appendChild(leagueImg);\n        headerContainer.appendChild(leagueName);\n        const badgeContainer = document.createElement('div');\n        badgeContainer.classList.add('bagde-container');\n        const contentContainer = document.createElement('div');\n        contentContainer.classList.add('content-container');\n        const footerContainer = document.createElement('div');\n        footerContainer.classList.add('footer-container');\n        template.appendChild(headerContainer);\n        template.appendChild(badgeContainer);\n        template.appendChild(contentContainer);\n        template.appendChild(footerContainer);\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(template);\n    }\n    attachStyles() {\n        var _a;\n        const style = document.createElement('style');\n        style.innerHTML = `\n      .container {\n        width: 260px;\n        border-width: 3px 1px 1px;\n        border-style: solid;\n        border-color: rgb(8, 142, 25) rgb(236, 236, 236) rgb(236, 236, 236);\n        border-image: initial;\n      }\n      .header-container {\n        display: flex;\n        background-color: rgb(236, 236, 236);\n        height: 21px;\n      }\n      .header-container * + * {\n        margin-left: 10px;\n      }\n      .badger-container {\n        position: relative;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        width: 180px;\n        height: 24px;\n        padding: 0px 20px;\n        margin: 0px auto;\n        background-color: blue;\n      }\n      .flag {\n        height: 21px;\n        width: 40px;\n        background-image: url(https://storage.googleapis.com/sportxpert-production-bucket/area_80f6e719-d916-4213-8bc2-f96d4c8321f6.jpg);\n        background-size: cover;\n      }\n      .content-container {\n        display: flex;\n        justify-content: space-between;\n        margin-top: 12px;\n        padding: 0px 12px 12px;\n      }\n      .footer-container {\n        padding: 6px 0px;\n        position: relative;\n        border-top: 1px solid rgb(236, 236, 236);\n        z-index: 2;\n      }\n    `;\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(style);\n    }\n}\nexports.MatchWidget = MatchWidget;\n\n\n//# sourceURL=webpack://widgets-library/./src/widgets/MatchWidget/MatchWidget.ts?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
+/******/ 	
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
