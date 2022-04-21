@@ -12,6 +12,10 @@ export class MatchWidget extends HTMLElement {
 
     this.render();
     this.attachStyles();
+
+    this.shadowRoot?.querySelector('button.incidents')?.addEventListener('click', () => {
+      this.shadowRoot?.querySelector('.incidents-container')?.classList.toggle('open');
+    });
   }
 
   get props(): IMatchWidget {
@@ -19,6 +23,10 @@ export class MatchWidget extends HTMLElement {
       acc[attributeName] = this.getAttribute(attributeName);
       return acc;
     }, {})
+  }
+
+  handleIncidentsButtonClick() {
+
   }
 
   render() {
