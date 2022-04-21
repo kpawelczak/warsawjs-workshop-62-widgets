@@ -19,7 +19,11 @@ const config: webpack.Configuration = {
         test: /\.html$/,
         exclude: /node_modules/,
         loader: "html-loader"
-      }
+      },
+      {
+        test: /\.handlebars$/,
+        loader: "handlebars-loader"
+      },
     ]
   },
   resolve: {

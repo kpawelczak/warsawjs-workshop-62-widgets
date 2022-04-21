@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="header-container">
+    <div
+    class="flag"
+    style="background-image: url({{season.area.badge_url}});"
+    ></div>
+    <img
+      src="{{season.competition.badge_url}}"
+      height="18"
+      alt="image"
+    >
+    <span>{{season.competition.name}}</span>
+  </div>
+  <div
+    class="badge-container"
+    style="background-color: {{custom.badgeData.color}};"
+  >
+    <span>{{custom.badgeData.label}}</span>
+  </div>
+  <div class="content-container">
+    <div class="team-container">
+      <div
+        class="team-badge"
+        style="background-image: url({{home.team_details.badge_url}});"
+      ></div>
+      <span class="team-name">{{home.team_details.displayed_name}}</span>
+    </div>
+    <div>
+      <div>{{home.regular_time_score}} : {{away.regular_time_score}}</div>
+      <div>({{home.first_half_score}} : {{away.first_half_score}})</div>
+    </div>
+    <div class="team-container">
+      <div
+        class="team-badge"
+        style="background-image: url({{away.team_details.badge_url}});"
+      ></div>
+      <span class="team-name">{{away.team_details.displayed_name}}</span>
+    </div>
+  </div>
+  <div class="footer-container">
+    <button class="incidents">Incidents</button>
+    <div class="incidents-container" style="z-index: 999;">
+      <div class="team-incidents">
+        {{#each home.incidents}}
+          <div class="team-single-incident">
+            {{this.responsible}}
+            <div>
+              <span class="incident-label">{{this.name}}</span>
+              <span class="sc-bdVaJa hrjgAq">{{this.occurred_at}}"</span>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="team-incidents">
+        {{#each away.incidents}}
+        <div class="team-single-incident">
+          {{this.responsible}}
+          <div>
+            <span class="incident-label">{{this.name}}</span>
+            <span class="sc-bdVaJa hrjgAq">{{this.occurred_at}}"</span>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

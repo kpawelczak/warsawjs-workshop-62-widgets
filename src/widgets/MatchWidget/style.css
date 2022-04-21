@@ -25,14 +25,13 @@
   height: 24px;
   padding: 0px 20px;
   margin: 0px auto;
-  background-color: blue;
+  background-color: red;
   color: white;
 }
 
 .flag {
   height: 21px;
   width: 40px;
-  background-image: url(https://storage.googleapis.com/sportxpert-production-bucket/area_80f6e719-d916-4213-8bc2-f96d4c8321f6.jpg);
   background-size: cover;
 }
 
@@ -48,7 +47,9 @@
   height: 75px;
   width: 75px;
   margin: 5px auto;
-  background: url(https://storage.googleapis.com/sportxpert-production-bucket/team_2fdc3078-3d08-461e-93ee-2c4240c2dde4.png) center center / contain no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footer-container {
@@ -106,6 +107,7 @@ button.incidents {
 
 .team-single-incident {
   margin-bottom: 6px;
+  text-align: left;
 }
 
 .incident-label {
