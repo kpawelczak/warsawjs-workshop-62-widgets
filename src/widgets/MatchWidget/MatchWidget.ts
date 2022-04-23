@@ -20,19 +20,18 @@ function htmlToElement(html: string | null): ChildNode | null {
 export class MatchWidget extends HTMLElement {
   data: any;
 
+  static get observedAttributes() { return ['match-id']; }
+
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
     this.attachStyles();
-    if (this.props['match-id']){
-      this.fetchData(this.props['match-id']).then((data) => {
-        this.data = data;
-        this.render()
-        this.shadowRoot?.querySelector('button.incidents')
-          ?.addEventListener('click', this.handleIncidentsClick);
-      })
-    }
+    this.fetchAndRender();
+  }
+
+  attributeChangedCallback() {
+    this.fetchAndRender();
   }
 
   connectedCallback() {
@@ -42,11 +41,22 @@ export class MatchWidget extends HTMLElement {
 
   disconnectedCallback() {
     this.shadowRoot?.querySelector('button.incidents')
-      ?.removeEventListener('click', this.handleIncidentsClick);
+      ?.removeEventListener('click', () => this.handleIncidentsClick());
   }
 
   handleIncidentsClick() {
     this.shadowRoot?.querySelector('.incidents-container')?.classList.toggle('open');
+  }
+
+  fetchAndRender() {
+    if (this.props['match-id']) {
+      this.fetchData(this.props['match-id']).then((data) => {
+        this.data = data;
+        this.render()
+        this.shadowRoot?.querySelector('button.incidents')
+          ?.addEventListener('click', () => this.handleIncidentsClick());
+      })
+    }
   }
 
   get props(): IMatchWidget {
