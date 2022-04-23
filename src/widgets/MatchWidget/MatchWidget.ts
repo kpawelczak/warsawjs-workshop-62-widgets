@@ -29,11 +29,24 @@ export class MatchWidget extends HTMLElement {
       this.fetchData(this.props['match-id']).then((data) => {
         this.data = data;
         this.render()
-        this.shadowRoot?.querySelector('button.incidents')?.addEventListener('click', () => {
-          this.shadowRoot?.querySelector('.incidents-container')?.classList.toggle('open');
-        });
+        this.shadowRoot?.querySelector('button.incidents')
+          ?.addEventListener('click', this.handleIncidentsClick);
       })
     }
+  }
+
+  connectedCallback() {
+    // We can move logic from constructor here, but it is not necessary
+    // https://stackoverflow.com/questions/59970043/custom-element-setup-constructor-vs-connectedcallback
+  }
+
+  disconnectedCallback() {
+    this.shadowRoot?.querySelector('button.incidents')
+      ?.removeEventListener('click', this.handleIncidentsClick);
+  }
+
+  handleIncidentsClick() {
+    this.shadowRoot?.querySelector('.incidents-container')?.classList.toggle('open');
   }
 
   get props(): IMatchWidget {

@@ -5,6 +5,9 @@ interface IMatchWidget {
 export declare class MatchWidget extends HTMLElement {
     data: any;
     constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    handleIncidentsClick(): void;
     get props(): IMatchWidget;
     get finishedLabel(): string;
     get liveLabel(): string;
