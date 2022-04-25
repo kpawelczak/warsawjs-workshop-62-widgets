@@ -1,0 +1,113 @@
+.container {
+    width: 260px;
+    border-width: 3px 1px 1px;
+    border-style: solid;
+    border-color: rgb(8, 142, 25) rgb(236, 236, 236) rgb(236, 236, 236);
+    border-image: initial;
+}
+
+.header-container {
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    height: 21px;
+}
+
+.header-container *+* {
+    margin-left: 10px;
+}
+
+.badge-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 24px;
+    padding: 0px 20px;
+    margin: 0px auto;
+    background-color: blue;
+    color: white;
+}
+
+.flag {
+    height: 21px;
+    width: 40px;
+    background-image: url(https://storage.googleapis.com/sportxpert-production-bucket/area_80f6e719-d916-4213-8bc2-f96d4c8321f6.jpg);
+    background-size: cover;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0px 12px 12px;
+}
+
+.team-badge {
+    display: block;
+    height: 75px;
+    width: 75px;
+    margin: 5px auto;
+    background: url(https://storage.googleapis.com/sportxpert-production-bucket/team_2fdc3078-3d08-461e-93ee-2c4240c2dde4.png) center center / contain no-repeat;
+}
+
+.footer-container {
+    padding: 6px 0px;
+    position: relative;
+    border-top: 1px solid whitesmoke;
+    z-index: 2;
+}
+
+button.incidents {
+    text-align: center;
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin: 0px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.incidents-container {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 0px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    transition: transform 0.5s ease 0s, visibility 0.6s ease 0s, opacity 0.5s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    border-right: 1px solid rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(236, 236, 236);
+    border-left: 1px solid rgb(236, 236, 236);
+    border-image: initial;
+    border-top: none;
+    box-shadow: rgb(0 0 0 / 5%) 0px 2px 4px 0px;
+    font-size: 0.6rem;
+}
+
+.incidents-container.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.team-incidents {
+    padding: 4px 4px 4px 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.team-single-incident {
+    margin-bottom: 6px;
+}
+
+.incident-label {
+    font-weight: bold;
+}

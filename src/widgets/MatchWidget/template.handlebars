@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="header-container">
+        <div class="flag"></div>
+        <img
+                src={{season.competition.badge_url}}   height="18"
+                alt="image"
+        >
+        <span>{{season.competition.name}}</span>
+    </div>
+    <div class="badge-container">
+        <span>45'</span>
+    </div>
+    <div class="content-container">
+        <div class="team-container">
+            <div class="team-badge"></div>
+            <span class="team-name">{{home.team_details.displayed_name}}</span>
+        </div>
+        <div class="sc-jKJlTe bUjyuA">
+            <div class="sc-eNQAEJ cDQrGk">
+                <span class="sc-bdVaJa bQsxgt">1 : 1</span>
+            </div>
+            <div class="sc-eNQAEJ cDQrGk">
+                <span class="sc-bdVaJa gKHhkn">(- : -)</span>
+            </div>
+        </div>
+        <div class="team-container">
+            <div class="team-badge"></div>
+            <span class="team-name">{{away.team_details.displayed_name}}</span>
+        </div>
+    </div>
+    <div class="footer-container">
+        <button class="incidents">Incidents</button>
+        <div class="incidents-container" style="z-index: 999;">
+            <div class="team-incidents">
+                {{#each home.incidents}}
+                    <div class="team-single-incident">
+                        {{this.responsible}}
+                        <div>
+                            <span class="incident-label">{{this.name}}</span>
+                            <span>{{this.occurred_at}}"</span>
+                        </div>
+                    </div>
+                {{/each }}
+            </div>
+
+            <div class="team-incidents">
+                {{#each away.incidents}}
+                    <div class="team-single-incident">
+                        {{this.responsible}}
+                        <div>
+                            <span class="incident-label">{{this.name}}</span>
+                            <span>{{this.occurred_at}}"</span>
+                        </div>
+                    </div>
+                {{/each }}
+            </div>
+        </div>
+    </div>

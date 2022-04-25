@@ -14,6 +14,16 @@ const config: webpack.Configuration = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use:"html-loader"
+      },
+      {
+        test: /\.handlebars$/,
+        exclude: /node_modules/,
+        use:"handlebars-loader"
       }
     ]
   },

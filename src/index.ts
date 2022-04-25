@@ -1,21 +1,26 @@
-import { random } from "./random";
-import "./styles/index.scss";
+// import { random } from "./random";
+// import "./styles/index.scss";
+//
+// declare global {
+//   interface Window {
+//     WidgetsLibrary: typeof Widgets;
+//   }
+// }
+//
+// export default class Widgets {
+//   value: string;
+//   constructor(el?: string) {
+//     if (!el) throw Error('Element parameter is required')
+//
+//     this.value = random();
+//     const valueElement: HTMLElement | null = document.querySelector(el);
+//     if (valueElement) valueElement.innerHTML = this.value;
+//   }
+// }
+//
+// window.WidgetsLibrary = Widgets;
 
-declare global {
-  interface Window {
-    WidgetsLibrary: typeof Widgets;
-  }
-}
+import MatchWidget from './widgets/MatchWidget/MatchWidget'
 
-export default class Widgets {
-  value: string;
-  constructor(el?: string) {
-    if (!el) throw Error('Element parameter is required')
+customElements.define('match-widget', MatchWidget)
 
-    this.value = random();
-    const valueElement: HTMLElement | null = document.querySelector(el);
-    if (valueElement) valueElement.innerHTML = this.value;
-  }
-}
-
-window.WidgetsLibrary = Widgets;
